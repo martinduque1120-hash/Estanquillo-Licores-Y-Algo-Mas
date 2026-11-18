@@ -1,0 +1,168 @@
+/* ESTILOS GENERALES */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #222;
+}
+
+/* NAVBAR */
+.navbar { padding: 12px 0; }
+.navbar-brand { font-size: 20px; }
+.navbar .nav-link { font-weight: 500; }
+.navbar .nav-link:hover { color: #0d6efd; }
+
+/* BANNER */
+.banner { background-color: #fff; padding: 70px 0; }
+.banner h1 { font-size: 42px; font-weight: bold; margin-bottom: 20px; }
+.banner p { font-size: 18px; color: #666; margin-bottom: 25px; }
+.banner img { max-height: 320px; object-fit: cover; }
+
+/* CATEGORÍAS */
+.categoria {
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.categoria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+.categoria h5 { margin-top: 10px; margin-bottom: 0; }
+
+/* PRODUCTOS */
+.producto {
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.2s;
+    background-color: white;
+}
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+.producto img { height: 230px; object-fit: contain; padding: 15px; }
+.producto h5 { font-size: 17px; min-height: 45px; }
+.precio { font-size: 20px; font-weight: bold; color: #198754; }
+
+/* BOTONES */
+.btn-primary { border-radius: 8px; }
+
+/* OFERTAS */
+#ofertas { padding-bottom: 20px; }
+
+/* CARRITO */
+#carrito .card { border-radius: 12px; }
+
+/* FOOTER */
+footer { margin-top: 60px; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .banner { padding: 40px 0; text-align: center; }
+    .banner h1 { font-size: 32px; }
+    .banner img { margin-top: 30px; max-height: 250px; }
+    .navbar form { width: 100% !important; }
+}
+
+/* COMO HACER UN PEDIDO */
+.como-pedir { padding: 20px 0; }
+.paso {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px 20px;
+    height: 100%;
+    border: 1px solid #e5e5e5;
+    transition: 0.2s;
+}
+.paso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+}
+.icono-paso { font-size: 35px; margin-bottom: 15px; }
+.paso h5 { font-weight: bold; margin-bottom: 10px; }
+.paso p { color: #666; margin-bottom: 0; }
+
+/* CARRITO MEJORADO */
+#carrito-contenido > div { gap: 15px; flex-wrap: wrap; }
+#carrito-contenido button { min-width: 34px; min-height: 34px; }
+#carrito-contenido .btn-danger { margin-left: 5px; }
+
+/* CARRITO EN CELULAR */
+@media (max-width: 576px) {
+    #carrito-contenido > div { align-items: flex-start !important; }
+    #carrito-contenido > div > div:first-child { width: 100%; }
+    #carrito-contenido > div > div:last-child { width: 100%; }
+}
+
+/* CARRITO - PRODUCTOS */
+.carrito-producto {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 20px;
+}
+.carrito-info { display: flex; flex-direction: column; }
+.carrito-info small { color: #666; margin-top: 4px; }
+.carrito-controles { display: flex; align-items: center; gap: 8px; }
+.carrito-controles button { min-width: 34px; height: 34px; }
+.cantidad-producto { min-width: 25px; text-align: center; font-weight: bold; }
+.btn-eliminar { margin-left: 8px; }
+.subtotal-producto { min-width: 100px; text-align: right; }
+
+/* CARRITO EN CELULAR */
+@media (max-width: 576px) {
+    .carrito-producto { grid-template-columns: 1fr; gap: 12px; }
+    .carrito-controles { justify-content: flex-start; }
+    .subtotal-producto { text-align: left; min-width: auto; }
+}
+
+/* ESTILOS ADICIONALES DEL CATÁLOGO DINÁMICO */
+
+.categoria {
+    user-select: none;
+}
+
+.categoria:focus-visible {
+    outline: 3px solid #0d6efd;
+    outline-offset: 3px;
+}
+
+.categoria-activa {
+    border-color: #0d6efd;
+    background-color: #eef5ff;
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.15);
+}
+
+.etiqueta-categoria {
+    display: inline-block;
+    color: #6c757d;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 8px;
+}
+
+.producto h5 {
+    line-height: 1.35;
+}
+
+.precio-pendiente {
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.imagen-producto {
+    height: 230px;
+    object-fit: contain;
+    padding: 15px;
+    background-color: #fff;
+}
+
+#productos-destacados,
+#catalogo-productos {
+    min-height: 80px;
+}
